@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>夢幻立委</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/background.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</head>
+
+<body>
+
+<!--    <div class="wrap">-->
+        <div class="title">
+            <div class="title_pic"></div>
+        </div>
+
+        <script>
+            var click1 = 0; //媒體
+            var click2 = 0; //教育
+            var click3 = 0; //同儕
+            var click4 = 0; //社群
+            var click5 = 0; //家庭
+
+            function onclick1(n) {
+                click1 += n;
+
+                chart.data.datasets[0].data[0] += n;
+                chart.update();
+            }
+
+            function onclick2(m) {
+
+                click2 += m;
+
+                chart.data.datasets[0].data[1] += m;
+                chart.update();
+            }
+
+            function onclick3(k) {
+
+                click3 += k;
+
+                chart.data.datasets[0].data[2] += k;
+                chart.update();
+            }
+
+            function onclick4(i) {
+
+                click4 += i;
+
+                chart.data.datasets[0].data[3] += i;
+                chart.update();
+            }
+
+            function onclick5(o) {
+
+                click5 += o;
+
+                chart.data.datasets[0].data[4] += o;
+                chart.update();
+            }
+
+        </script>
+        
+        <div class="all_question">
+        <div class="question_area 1">
+            <div class="question_title">
+                <img src="../fantasy/pic/question/1.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a">
+                    <input type="button" onClick="onclick1(4)" style="background-image: url(pic/ans/1a_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a">
+                </div>
+                <div class="b 1b ">
+                    <input type="button" onClick="onclick1(1)" style="background-image: url(pic/ans/1b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c">
+                    <input type="button" onClick="onclick1(3)" style="background-image: url(pic/ans/1c_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a">
+                </div>
+                <div class="d 1d">
+                    <input type="button" onClick="onclick1(2)" style="background-image: url(pic/ans/1d_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="question_area 2">
+            <div class="question_title"><img src="../fantasy/pic/question/2.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 2a"> <input type="button" onClick="onclick2(4)" style="background-image: url(pic/ans/2a_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 2b"> <input type="button" onClick="onclick2(1)" style="background-image: url(pic/ans/2b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 2c"> <input type="button" onClick="onclick2(3)" style="background-image: url(pic/ans/2c_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 2d"> <input type="button" onClick="onclick2(2)" style="background-image: url(pic/ans/2d_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+
+        <div class="question_area 3">
+            <div class="question_title"><img src="../fantasy/pic/question/3.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick3(1)" style="background-image: url(pic/ans/3a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick3(3)" style="background-image: url(pic/ans/3b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick3(2)" style="background-image: url(pic/ans/3c_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick3(4)" style="background-image: url(pic/ans/3d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+
+        <div class="question_area 4">
+            <div class="question_title"><img src="../fantasy/pic/question/4.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick4(1)" style="background-image: url(pic/ans/4a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick4(3)" style="background-image: url(pic/ans/4b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick4(4)" style="background-image: url(pic/ans/4c_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick4(2)" style="background-image: url(pic/ans/4d_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+
+        <div class="question_area 5">
+            <div class="question_title"><img src="../fantasy/pic/question/5.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick5(1)" style="background-image: url(pic/ans/5a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick5(3)" style="background-image: url(pic/ans/5b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick5(4)" style="background-image: url(pic/ans/5c_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick5(2)" style="background-image: url(pic/ans/5d_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+
+        <div class="question_area 6">
+            <div class="question_title"><img src="../fantasy/pic/question/6.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick1(3)" style="background-image: url(pic/ans/6a_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick1(1)" style="background-image: url(pic/ans/6b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick1(2)" style="background-image: url(pic/ans/6c_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick1(4)" style="background-image: url(pic/ans/6d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+
+        <div class="question_area 7">
+            <div class="question_title"><img src="../fantasy/pic/question/7.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick2(2)" style="background-image: url(pic/ans/7a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick2(1)" style="background-image: url(pic/ans/7b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick2(4)" style="background-image: url(pic/ans/7c_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick2(3)" style="background-image: url(pic/ans/7d_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+
+        <div class="question_area 8">
+            <div class="question_title"><img src="../fantasy/pic/question/8.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick3(1)" style="background-image: url(pic/ans/8a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick3(3)" style="background-image: url(pic/ans/8b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick3(2)" style="background-image: url(pic/ans/8c_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick3(4)" style="background-image: url(pic/ans/8d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+
+        <div class="question_area 9">
+            <div class="question_title"><img src="../fantasy/pic/question/9.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick4(1)" style="background-image: url(pic/ans/9a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick4(2)" style="background-image: url(pic/ans/9b_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick4(3)" style="background-image: url(pic/ans/9c_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick4(4)" style="background-image: url(pic/ans/9d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+
+        <div class="question_area 10">
+            <div class="question_title"><img src="../fantasy/pic/question/10.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick5(2)" style="background-image: url(pic/ans/10a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick5(3)" style="background-image: url(pic/ans/10b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick5(1)" style="background-image: url(pic/ans/10c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick5(4)" style="background-image: url(pic/ans/10d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+
+        <div class="question_area 11">
+            <div class="question_title"><img src="../fantasy/pic/question/11.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick1(1)" style="background-image: url(pic/ans/11a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick1(1)" style="background-image: url(pic/ans/11b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick1(1)" style="background-image: url(pic/ans/11c_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick1(1)" style="background-image: url(pic/ans/11d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+
+        <div class="question_area 12">
+            <div class="question_title"><img src="../fantasy/pic/question/12.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick2(1)" style="background-image: url(pic/ans/12a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick2(1)" style="background-image: url(pic/ans/12b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick2(1)" style="background-image: url(pic/ans/12c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick2(1)" style="background-image: url(pic/ans/12d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+        <div class="question_area 13">
+            <div class="question_title"><img src="../fantasy/pic/question/13.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick3(1)" style="background-image: url(pic/ans/13a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick3(1)" style="background-image: url(pic/ans/13b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick3(1)" style="background-image: url(pic/ans/13c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick3(1)" style="background-image: url(pic/ans/13d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+        <div class="question_area 14">
+            <div class="question_title"><img src="../fantasy/pic/question/14.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick4(1)" style="background-image: url(pic/ans/14a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick4(1)" style="background-image: url(pic/ans/14b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick4(1)" style="background-image: url(pic/ans/14c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick4(1)" style="background-image: url(pic/ans/14d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+        <div class="question_area 15">
+            <div class="question_title"><img src="../fantasy/pic/question/15.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick5(1)" style="background-image: url(pic/ans/15a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick5(1)" style="background-image: url(pic/ans/15b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick5(1)" style="background-image: url(pic/ans/15c_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick5(1)" style="background-image: url(pic/ans/15d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+        <div class="question_area 16">
+            <div class="question_title"><img src="../fantasy/pic/question/16.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick1(3)" style="background-image: url(pic/ans/16a_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick1(1)" style="background-image: url(pic/ans/16b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick1(2)" style="background-image: url(pic/ans/16c_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick1(4)" style="background-image: url(pic/ans/16d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+        <div class="question_area 17">
+            <div class="question_title"><img src="../fantasy/pic/question/17.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick2(1)" style="background-image: url(pic/ans/17a_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick2(3)" style="background-image: url(pic/ans/17b_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick2(4)" style="background-image: url(pic/ans/17c_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick2(2)" style="background-image: url(pic/ans/17d_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+        <div class="question_area 18">
+            <div class="question_title"><img src="../fantasy/pic/question/18.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick3(2)" style="background-image: url(pic/ans/18a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick3(1)" style="background-image: url(pic/ans/18b_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick3(4)" style="background-image: url(pic/ans/18c_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick3(3)" style="background-image: url(pic/ans/18d_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+        <div class="question_area 19">
+            <div class="question_title"><img src="../fantasy/pic/question/19.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick4(3)" style="background-image: url(pic/ans/19a_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat; background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick4(2)" style="background-image: url(pic/ans/19b_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick4(1)" style="background-image: url(pic/ans/19c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick4(4)" style="background-image: url(pic/ans/19d_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+        <div class="question_area 20">
+            <div class="question_title"><img src="../fantasy/pic/question/20.png" alt=""></div>
+            <div class="question_pic"><img src="../fantasy/pic/illustrate/edu_1.png" width="260px" height="260px" alt=""></div>
+            <div class="option">
+                <div class="a 1a"> <input type="button" onClick="onclick5(2)" style="background-image: url(pic/ans/20a_2.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="b 1b"> <input type="button" onClick="onclick5(4)" style="background-image: url(pic/ans/20b_4.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="c 1c"> <input type="button" onClick="onclick5(1)" style="background-image: url(pic/ans/20c_1.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+                <div class="d 1d"> <input type="button" onClick="onclick5(3)" style="background-image: url(pic/ans/20d_3.png);width: 438px;height: 61px; border: none; background-color: transparent;background-repeat: no-repeat;" data-type="1a"></div>
+            </div>
+        </div>
+        </div>
+        
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".a").click(function() {
+                    $('html, body').animate({
+                        scrollTop: ($(window).scrollTop() + 1024) + 'px'
+                    }, 1000);
+                });
+                $(".b").click(function() {
+                    $('html, body').animate({
+                        scrollTop: ($(window).scrollTop() + 1024) + 'px'
+                    }, 1000);
+                });
+                $(".c").click(function() {
+                    $('html, body').animate({
+                        scrollTop: ($(window).scrollTop() + 1024) + 'px'
+                    }, 1000);
+                });
+
+                $(".d").click(function() {
+                    $('html, body').animate({
+                        scrollTop: ($(window).scrollTop() + 1024) + 'px'
+                    }, 1000);
+                });
+            });
+            //    選到選項往下滑
+
+        </script>
+
+        <div class="result">
+            <div style="width: 650px;top: 154px;position: absolute;left: 62px;">
+            </div>
+            <canvas id="chart"></canvas>
+
+            <script type="text/javascript">
+                Chart.defaults.global.legend.display = false;
+                Chart.defaults.global.defaultFontFamily = "Microsoft JhengHei";
+                Chart.defaults.global.defaultFontColor = '#1D2975';
+                Chart.defaults.global.defaultFontSize = 20;
+                var ctx = document.getElementById('chart').getContext('2d');
+                var chart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: [ "教育", "媒體","同儕", "社群", "家庭", ],
+                        datasets: [{
+                            label: '',
+                            data: [click2, click1, click3, click4, click5],
+                            backgroundColor: [
+                                '#edbebe',
+                                '#fcf9f1',
+                                '#e6c675',
+                                '#b9dce3',
+                                '#4a397c',
+                            ],
+                        }, ]
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+
+                    }
+                });
+
+            </script>
+
+        </div>
+<!--    </div>-->
+</body>
+
+</html>
